@@ -1,0 +1,29 @@
+<div>
+    <h1 class="my-5"> Enregistrement </h1>
+    <div>
+        <p *ngIf="isOpen" class="alert-will"> Enregistrement réussi <span class="x" (click)="close()" >x</span></p>
+
+        <div class="will">
+        <form [formGroup] = "applyForm" (submit)="save()">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Title</label>
+                <input type="text" class="form-control"  aria-describedby="emailHelp" formControlName="title">
+              
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Price</label>
+                <input type="number" class="form-control"  aria-describedby="emailHelp" formControlName="price">
+              
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Description</label>
+                <input type="text" class="form-control"  aria-describedby="emailHelp" formControlName="description">
+              
+              </div>
+            
+              <button type="submit" class="btn btn-primary">Valider</button>
+        </form>
+        </div>
+    </div>
+</div>
+

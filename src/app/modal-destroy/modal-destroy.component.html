@@ -1,0 +1,20 @@
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="destroy_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" [ngClass] = "{ 'show' : Open}" [style.display] = "Open? 'block':'none'" (click)="closeModal($event)">
+    <div class="modal-dialog" role="document" (click)="$event.stopPropagation()">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Voulez -vous supprimer cet article</h1>
+          <button type="button" class="btn-close" (click)="closeModal()" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary"(click)="closeModal()">Non</button>
+          <button type="button" class="btn btn-danger" (click)="supprimer()">OUi</button>
+        </div>
+      </div>
+    </div>
+  </div>

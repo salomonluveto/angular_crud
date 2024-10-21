@@ -1,0 +1,43 @@
+<!-- Button trigger modal -->
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="create" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" [ngClass] = "{ 'show' : Open}" [style.display] = "Open? 'block':'none'" (click)="closeModal($event)">
+    <div class="modal-dialog" role="document" (click)="$event.stopPropagation()">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Enregistrement</h1>
+          <button type="button" class="btn-close" (click)="closeModal()" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div>
+               
+        
+                <div class="will">
+                <form [formGroup] = "applyForm" (submit)="save()">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Title</label>
+                        <input type="text" class="form-control"  aria-describedby="emailHelp" formControlName="title" >
+                      
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Price</label>
+                        <input type="number" class="form-control"  aria-describedby="emailHelp" formControlName="price">
+                      
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Description</label>
+                        <input type="text" class="form-control"  aria-describedby="emailHelp" formControlName="description">
+                      
+                      </div>
+                    
+                      <button type="submit" class="btn btn-primary" (click)="closeModal()">Valider</button>
+                </form>
+                </div>
+            </div>
+        </div>
+   
+      </div>
+    </div>
+  </div>

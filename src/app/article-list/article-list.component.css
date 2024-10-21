@@ -1,0 +1,29 @@
+.will{
+    margin-right: 700px;
+    font-weight: bold;
+    
+}
+.alert-will{
+   
+    color: green;
+    margin-right: 700px;
+    border: 1px solid green;
+    padding: 15px;
+    border-radius: 5px;
+   
+    font-size: 25px;
+}
+.alert-will1{
+   
+    color: red;
+    margin-right: 700px;
+    border: 1px solid red;
+    padding: 15px;
+    border-radius: 5px;
+   
+    font-size: 25px;
+}
+.x{
+    float: right;
+    cursor: pointer;
+}

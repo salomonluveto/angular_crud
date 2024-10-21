@@ -1,0 +1,30 @@
+<div>
+    <h1 class="my-5"> Modifier </h1>
+    <div>
+        <p *ngIf="isOpen" class="alert-will"> Modification réussi <span class="x" (click)="close()" >x</span></p>
+
+        <div class="will">
+        <form [formGroup] = "editForm" (submit)="update()">
+            <input type="hidden" class="form-control"  aria-describedby="emailHelp" formControlName="id" value="">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Title</label>
+                <input type="text" class="form-control"  aria-describedby="emailHelp" formControlName="title" value="">
+              
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Price</label>
+                <input type="number" class="form-control"  aria-describedby="emailHelp" formControlName="price">
+              
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Description</label>
+                <input type="text" class="form-control"  aria-describedby="emailHelp" formControlName="description">
+              
+              </div>
+            
+              <button type="submit" class="btn btn-primary">Valider</button>
+        </form>
+        </div>
+    </div>
+</div>
+
